@@ -8,13 +8,9 @@
   </head>
   <body>
     <div id="app">
-      <div>
-        <h1>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum,
-          eaque. Architecto, omnis repellendus! Sunt cum porro dolor, corporis
-          ab officiis velit earum a dicta quia enim sed distinctio reiciendis
-          numquam.
-        </h1>
+      <div class="container">
+        <h2>Этапы курса</h2>
+        <div class="ptag">{{descript[currentDescr]}}</div>
         <div class="cont">
           <div class="cont1" v-for="(value,i) in tap">
             <div v-if="passedInd.includes(i)" class="round">{{value.key}}</div>
@@ -23,19 +19,23 @@
             <div>{{value.value}}</div>
           </div>
         </div>
-        <button
-          :class="{ 'btn':true,'dis':isBackDisabled,'back':true}"
-          @click="prevTap"
-        >
-          Назад
-        </button>
-        <button
-          :class="{'btn':true,'next':true,'disnext':isNextDisabled}"
-          @click="nextTap"
-          class="btn next"
-        >
-          Вперед
-        </button>
+        <div>
+          <button
+            :disabled="isBackDisabled"
+            :class="{ 'btn':true,'dis':isBackDisabled,'back':true}"
+            @click="prevTap"
+          >
+            Назад
+          </button>
+          <button
+            :disabled="isNextDisabled"
+            :class="{'btn':true,'next':true,'disnext':isNextDisabled}"
+            @click="nextTap"
+            class="btn next"
+          >
+            Вперед
+          </button>
+        </div>
       </div>
     </div>
 

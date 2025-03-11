@@ -24,8 +24,18 @@ const app = {
     ],
     currentInd: 0,
     passedInd: [0],
+    descript: [
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis non saepelaboriosam voluptate similique cum? Sapiente consectetur itaque minus quisquam,saepe in",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      ". Corporis non saepelaboriosam voluptate similique cum? Sapiente consectetur itaque minus quisquam,saepe in. Natus possimus accusamus unde quis accusantium, similique ratione?",
+      "Lorem ipsum dolor sit t. Corporis non saepelaboriosam voluptate similique cum? Sapiente consectetur itaque minus quisquam,saepe in. Natus possimus accusamus unde quis accusantium, similique ratione?",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis non saepelaboriosam voluptate similique cum? Sapiente consectetur itaque minus quisquam,saepe in. Natus possimus accusamus unde quis accusantium, similique ratione?",
+    ],
   }),
   computed: {
+    currentDescr() {
+      return this.currentInd;
+    },
     isBackDisabled() {
       return this.currentInd === 0;
     },

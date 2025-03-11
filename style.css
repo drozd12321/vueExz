@@ -30,6 +30,7 @@
   border: none;
   margin-top: 10px;
   margin-left: 10px;
+  margin-bottom: 10px;
 }
 
 .back {
@@ -45,4 +46,27 @@
 }
 .disnext {
   background-color: rgb(43, 70, 7);
+}
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 15px;
+  margin-top: 20px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+button:disabled {
+  cursor: not-allowed;
+}
+.ptag {
+  height: 100px;
+  width: 80vw;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  margin-bottom: 10px;
+  border-radius: 15px;
+  padding: 6px;
 }
