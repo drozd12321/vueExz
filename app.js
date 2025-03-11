@@ -58,6 +58,13 @@ const app = {
         console.log("df");
       }
     },
+    handlrTap(i) {
+      this.currentInd = i;
+      for (let g = 1; g <= i; g++) {
+        this.passedInd.push(g);
+      }
+      this.passedInd = this.passedInd.filter((ind) => ind <= i);
+    },
   },
 };
 
