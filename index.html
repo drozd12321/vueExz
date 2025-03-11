@@ -28,6 +28,7 @@
         </div>
         <div>
           <button
+            v-if="!isEnd"
             :disabled="isBackDisabled"
             :class="{ 'btn':true,'dis':isBackDisabled,'back':true}"
             @click="prevTap"
@@ -35,12 +36,28 @@
             Назад
           </button>
           <button
+            v-else-if="isEnd"
+            :class="{ 'btn':true,'dis':isBackDisabled,'back':true}"
+            @click="reset"
+          >
+            Начать заново
+          </button>
+          <button
+            v-if="currentInd <4"
             :disabled="isNextDisabled"
             :class="{'btn':true,'next':true,'disnext':isNextDisabled}"
             @click="nextTap"
             class="btn next"
           >
             Вперед
+          </button>
+          <button
+            v-else-if="!isEnd"
+            :class="{'btn':true,'next':true}"
+            @click="end"
+            class="btn next"
+          >
+            Закончить
           </button>
         </div>
       </div>

@@ -23,6 +23,7 @@ const app = {
       },
     ],
     currentInd: 0,
+    isEnd: false,
     passedInd: [0],
     descript: [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis non saepelaboriosam voluptate similique cum? Sapiente consectetur itaque minus quisquam,saepe in",
@@ -62,6 +63,16 @@ const app = {
         this.passedInd.push(g);
       }
       this.passedInd = this.passedInd.filter((ind) => ind <= i);
+    },
+    end() {
+      this.isEnd = true;
+    },
+    reset() {
+      if (this.isEnd) {
+        this.currentInd = 0;
+        this.passedInd = [0];
+        this.isEnd = false;
+      }
     },
   },
 };
