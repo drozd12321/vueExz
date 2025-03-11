@@ -48,14 +48,12 @@ const app = {
       if (this.currentInd > 0) {
         this.currentInd--;
         this.passedInd.pop();
-        console.log("dfgdf");
       }
     },
     nextTap() {
       if (this.currentInd < this.tap.length - 1) {
         this.currentInd++;
         this.passedInd.push(this.currentInd);
-        console.log("df");
       }
     },
     handlrTap(i) {

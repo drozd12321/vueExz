@@ -13,8 +13,15 @@
         <div class="ptag">{{descript[currentDescr]}}</div>
         <div class="cont">
           <div @click="handlrTap(i)" class="cont1" v-for="(value,i) in tap">
-            <div v-if="passedInd.includes(i)" class="round">{{value.key}}</div>
-            <div v-else class="noact">{{value.key}}</div>
+            <div
+              :class="{
+                'round':passedInd.includes(i),
+                'grey':passedInd.includes(i) && i<currentInd,
+                'noact':!passedInd.includes(i)
+            }"
+            >
+              {{value.key}}
+            </div>
             &nbsp;
             <div>{{value.value}}</div>
           </div>

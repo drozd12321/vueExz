@@ -71,3 +71,6 @@ button:disabled {
   border-radius: 15px;
   padding: 6px;
 }
+.grey {
+  color: gray;
+}
