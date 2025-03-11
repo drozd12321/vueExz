@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div>
+        <h1>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum,
+          eaque. Architecto, omnis repellendus! Sunt cum porro dolor, corporis
+          ab officiis velit earum a dicta quia enim sed distinctio reiciendis
+          numquam.
+        </h1>
+        <div class="cont">
+          <div class="cont1" v-for="(value,i) in tap">
+            <div v-if="passedInd.includes(i)" class="round">{{value.key}}</div>
+            <div v-else class="noact">{{value.key}}</div>
+            &nbsp;
+            <div>{{value.value}}</div>
+          </div>
+        </div>
+        <button
+          :class="{ 'btn':true,'dis':isBackDisabled,'back':true}"
+          @click="prevTap"
+        >
+          Назад
+        </button>
+        <button
+          :class="{'btn':true,'next':true,'disnext':isNextDisabled}"
+          @click="nextTap"
+          class="btn next"
+        >
+          Вперед
+        </button>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

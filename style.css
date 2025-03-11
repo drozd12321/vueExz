@@ -1,0 +1,48 @@
+.cont {
+  display: flex;
+  gap: 10px;
+}
+.cont1 {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 10px;
+  width: 150px;
+}
+.round {
+  background-color: rgb(14, 241, 14);
+  border-radius: 40%;
+  padding: 20px;
+}
+.noact {
+  background-color: gray;
+  color: black;
+  border-radius: 40%;
+  padding: 20px;
+}
+.btn {
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.back {
+  background-color: red;
+  color: white;
+}
+.next {
+  background-color: rgb(129, 209, 16);
+  color: white;
+}
+.dis {
+  background-color: rgb(141, 5, 5);
+}
+.disnext {
+  background-color: rgb(43, 70, 7);
+}
